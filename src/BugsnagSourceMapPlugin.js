@@ -62,7 +62,7 @@ class BugsnagSourceMapPlugin {
   }
 
   uploadSourceMap(sourceFile, sourceMap, compilation) {
-    const minifiedUrl = `${this.publicPath}/${sourceFile}`;
+    const minifiedUrl = `${this.publicPath}${sourceFile}`;
     const sourceMapPath = compilation.assets[sourceMap].existsAt;
     const sourceFilePath = compilation.assets[sourceFile].existsAt;
     const options = {
